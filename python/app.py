@@ -5,12 +5,12 @@ from detection.cnn.cnn_gesture_system import CnnGestureSystem
 
 if __name__ == "__main__":
 
-    #cnn_gesture_system = CnnGestureSystem()
-    #cnn_gesture_system.create_model4()
-    #cnn_gesture_system.start_detection("../../models/model4.h5")
+    # cnn_gesture_system = CnnGestureSystem()
+    # cnn_gesture_system.create_model4()
+    # cnn_gesture_system.start_detection("../../models/model4.h5")
 
     # For Matlab
-    c = Client("172.22.32.1", 7777)
+    c = Client("172.22.32.1", 7777)  # 172.22.32.1 192.168.6.177
     c.connect()
     c.send("Hello server!")
 

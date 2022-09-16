@@ -141,7 +141,7 @@ class GestureSystem:
             and d1_d4_check and d5_checks
 
     @staticmethod
-    def right_detect(d0, d1, d2, d3, d4, d5):
+    def left_detect(d0, d1, d2, d3, d4, d5):
         reference = math.hypot(d4[0] - d0[0], d4[1] - d0[1])  # distance between wrist and index
 
         wrist_distance_d1 = 0.6 < math.hypot(d1[0] - d0[0], d1[1] - d0[1]) / reference < 1.3
@@ -154,7 +154,7 @@ class GestureSystem:
         return wrist_distance_d1 and wrist_distance_d2 and wrist_distance_d3 and wrist_distance_d5 and d5_check
 
     @staticmethod
-    def left_detect(d0, d1, d2, d3, d4, d5):
+    def right_detect(d0, d1, d2, d3, d4, d5):
         reference = math.hypot(d4[0] - d0[0], d4[1] - d0[1])  # distance between wrist and index
 
         wrist_distance_d1 = 0.6 < math.hypot(d1[0] - d0[0], d1[1] - d0[1]) / reference < 1.3
@@ -255,7 +255,7 @@ class GestureSystem:
                     self._detected_gesture = self._NO_HAND
                     self._gesture_changed = True
 
-            if self._gesture_changed or ((time.time() - self._last_gesture_time) > 1):
+            if self._gesture_changed or ((time.time() - self._last_gesture_time) > 2):
                 callback(self._detected_gesture)
                 self._gesture_changed = False
                 self._last_gesture_time = time.time()

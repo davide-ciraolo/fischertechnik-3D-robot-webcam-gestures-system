@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/roboticharmgestures.iml" filepath="$PROJECT_DIR$/.idea/roboticharmgestures.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/fischertechnik-3D-robot-webcam-gestures-system.iml" filepath="$PROJECT_DIR$/.idea/fischertechnik-3D-robot-webcam-gestures-system.iml" />
     </modules>
   </component>
 </project>
